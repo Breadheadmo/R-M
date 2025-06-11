@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    
+    <!-- Particle glow -->
+    <radialGradient id="particle-glow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Base background -->
+  <rect width="1200" height="600" fill="url(#bg-gradient)" />
+  
+  <!-- Abstract network grid -->
+  <g stroke="#334155" stroke-width="0.5" opacity="0.3">
+    <!-- Horizontal lines -->
+    <line x1="0" y1="100" x2="1200" y2="100" />
+    <line x1="0" y1="200" x2="1200" y2="200" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="0" y1="400" x2="1200" y2="400" />
+    <line x1="0" y1="500" x2="1200" y2="500" />
+    
+    <!-- Vertical lines -->
+    <line x1="100" y1="0" x2="100" y2="600" />
+    <line x1="300" y1="0" x2="300" y2="600" />
+    <line x1="500" y1="0" x2="500" y2="600" />
+    <line x1="700" y1="0" x2="700" y2="600" />
+    <line x1="900" y1="0" x2="900" y2="600" />
+    <line x1="1100" y1="0" x2="1100" y2="600" />
+  </g>
+  
+  <!-- Digital circuit pattern -->
+  <g stroke="#0ea5e9" stroke-width="1.5" fill="none" opacity="0.4">
+    <path d="M0,150 L200,150 L200,350 L400,350 L400,200 L600,200 L600,400 L800,400 L800,100 L1000,100 L1000,300 L1200,300" />
+    <path d="M0,450 L300,450 L300,250 L500,250 L500,500 L700,500 L700,150 L900,150 L900,350 L1100,350 L1100,200 L1200,200" />
+    <path d="M100,0 L100,100 L300,100 L300,300 L500,300 L500,150 L700,150 L700,400 L900,400 L900,250 L1100,250 L1100,500 L1200,500" />
+  </g>
+  
+  <!-- Connection nodes -->
+  <g fill="#3b82f6">
+    <circle cx="200" cy="150" r="4" />
+    <circle cx="200" cy="350" r="4" />
+    <circle cx="400" cy="350" r="4" />
+    <circle cx="400" cy="200" r="4" />
+    <circle cx="600" cy="200" r="4" />
+    <circle cx="600" cy="400" r="4" />
+    <circle cx="800" cy="400" r="4" />
+    <circle cx="800" cy="100" r="4" />
+    <circle cx="1000" cy="100" r="4" />
+    <circle cx="1000" cy="300" r="4" />
+    
+    <circle cx="300" cy="450" r="4" />
+    <circle cx="300" cy="250" r="4" />
+    <circle cx="500" cy="250" r="4" />
+    <circle cx="500" cy="500" r="4" />
+    <circle cx="700" cy="500" r="4" />
+    <circle cx="700" cy="150" r="4" />
+    <circle cx="900" cy="150" r="4" />
+    <circle cx="900" cy="350" r="4" />
+    <circle cx="1100" cy="350" r="4" />
+    <circle cx="1100" cy="200" r="4" />
+    
+    <circle cx="100" cy="100" r="4" />
+    <circle cx="300" cy="100" r="4" />
+    <circle cx="300" cy="300" r="4" />
+    <circle cx="500" cy="300" r="4" />
+    <circle cx="500" cy="150" r="4" />
+    <circle cx="700" cy="150" r="4" />
+    <circle cx="700" cy="400" r="4" />
+    <circle cx="900" cy="400" r="4" />
+    <circle cx="900" cy="250" r="4" />
+    <circle cx="1100" cy="250" r="4" />
+    <circle cx="1100" cy="500" r="4" />
+  </g>
+  
+  <!-- Glowing particles -->
+  <g>
+    <circle cx="200" cy="150" r="15" fill="url(#particle-glow)" opacity="0.5">
+      <animate attributeName="opacity" values="0.5;0.8;0.5" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="600" cy="400" r="20" fill="url(#particle-glow)" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="4s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="900" cy="150" r="25" fill="url(#particle-glow)" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="300" cy="450" r="18" fill="url(#particle-glow)" opacity="0.5">
+      <animate attributeName="opacity" values="0.5;0.8;0.5" dur="3.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="700" cy="250" r="22" fill="url(#particle-glow)" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="4.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Digital data streams -->
+  <g>
+    <!-- Stream 1 -->
+    <circle cx="200" cy="150" r="2" fill="#ffffff">
+      <animate attributeName="cx" values="200;400;600;800;1000" dur="5s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="150;200;250;300;350" dur="5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0.8;0.6;0.4;0" dur="5s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Stream 2 -->
+    <circle cx="300" cy="450" r="2" fill="#ffffff">
+      <animate attributeName="cx" values="300;500;700;900;1100" dur="6s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="450;400;350;300;250" dur="6s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0.8;0.6;0.4;0" dur="6s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Stream 3 -->
+    <circle cx="900" cy="150" r="2" fill="#ffffff">
+      <animate attributeName="cx" values="900;700;500;300;100" dur="7s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="150;200;250;300;350" dur="7s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0.8;0.6;0.4;0" dur="7s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Abstract tech elements -->
+  <g opacity="0.15">
+    <!-- Circuit board patterns -->
+    <rect x="50" y="50" width="200" height="200" rx="10" ry="10" stroke="#60a5fa" stroke-width="2" fill="none" />
+    <rect x="950" y="350" width="200" height="200" rx="10" ry="10" stroke="#60a5fa" stroke-width="2" fill="none" />
+    
+    <!-- CPU-like shapes -->
+    <rect x="75" y="75" width="150" height="150" fill="#0ea5e9" opacity="0.2" />
+    <rect x="975" y="375" width="150" height="150" fill="#0ea5e9" opacity="0.2" />
+    
+    <!-- Connection lines -->
+    <line x1="250" y1="150" x2="350" y2="150" stroke="#60a5fa" stroke-width="2" />
+    <line x1="950" y1="450" x2="850" y2="450" stroke="#60a5fa" stroke-width="2" />
+  </g>
+  
+  <!-- Overlay gradient for depth -->
+  <rect width="1200" height="600" fill="url(#bg-gradient)" opacity="0.3" />
+</svg>

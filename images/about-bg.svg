@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    
+    <!-- Team member glow -->
+    <radialGradient id="team-glow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0" />
+    </radialGradient>
+    
+    <!-- Connection line gradient -->
+    <linearGradient id="connection-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Base background -->
+  <rect width="1200" height="600" fill="url(#bg-gradient)" />
+  
+  <!-- Abstract grid pattern -->
+  <g stroke="#334155" stroke-width="0.5" opacity="0.2">
+    <!-- Horizontal lines -->
+    <line x1="0" y1="100" x2="1200" y2="100" />
+    <line x1="0" y1="200" x2="1200" y2="200" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="0" y1="400" x2="1200" y2="400" />
+    <line x1="0" y1="500" x2="1200" y2="500" />
+    
+    <!-- Vertical lines -->
+    <line x1="100" y1="0" x2="100" y2="600" />
+    <line x1="300" y1="0" x2="300" y2="600" />
+    <line x1="500" y1="0" x2="500" y2="600" />
+    <line x1="700" y1="0" x2="700" y2="600" />
+    <line x1="900" y1="0" x2="900" y2="600" />
+    <line x1="1100" y1="0" x2="1100" y2="600" />
+  </g>
+  
+  <!-- Team structure visualization -->
+  <g>
+    <!-- Central node (CEO/Leadership) -->
+    <circle cx="600" cy="200" r="40" fill="#1e40af" opacity="0.8" />
+    
+    <!-- Department nodes -->
+    <circle cx="300" cy="350" r="30" fill="#1e40af" opacity="0.7" />
+    <circle cx="600" cy="350" r="30" fill="#1e40af" opacity="0.7" />
+    <circle cx="900" cy="350" r="30" fill="#1e40af" opacity="0.7" />
+    
+    <!-- Team member nodes -->
+    <circle cx="200" cy="450" r="20" fill="#1e40af" opacity="0.6" />
+    <circle cx="300" cy="450" r="20" fill="#1e40af" opacity="0.6" />
+    <circle cx="400" cy="450" r="20" fill="#1e40af" opacity="0.6" />
+    
+    <circle cx="500" cy="450" r="20" fill="#1e40af" opacity="0.6" />
+    <circle cx="600" cy="450" r="20" fill="#1e40af" opacity="0.6" />
+    <circle cx="700" cy="450" r="20" fill="#1e40af" opacity="0.6" />
+    
+    <circle cx="800" cy="450" r="20" fill="#1e40af" opacity="0.6" />
+    <circle cx="900" cy="450" r="20" fill="#1e40af" opacity="0.6" />
+    <circle cx="1000" cy="450" r="20" fill="#1e40af" opacity="0.6" />
+    
+    <!-- Connection lines -->
+    <!-- Leadership to departments -->
+    <line x1="600" y1="200" x2="300" y2="350" stroke="url(#connection-gradient)" stroke-width="3" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="3s" repeatCount="indefinite" />
+    </line>
+    <line x1="600" y1="200" x2="600" y2="350" stroke="url(#connection-gradient)" stroke-width="3" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="3.5s" repeatCount="indefinite" />
+    </line>
+    <line x1="600" y1="200" x2="900" y2="350" stroke="url(#connection-gradient)" stroke-width="3" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="4s" repeatCount="indefinite" />
+    </line>
+    
+    <!-- Departments to team members -->
+    <line x1="300" y1="350" x2="200" y2="450" stroke="url(#connection-gradient)" stroke-width="2" opacity="0.5" />
+    <line x1="300" y1="350" x2="300" y2="450" stroke="url(#connection-gradient)" stroke-width="2" opacity="0.5" />
+    <line x1="300" y1="350" x2="400" y2="450" stroke="url(#connection-gradient)" stroke-width="2" opacity="0.5" />
+    
+    <line x1="600" y1="350" x2="500" y2="450" stroke="url(#connection-gradient)" stroke-width="2" opacity="0.5" />
+    <line x1="600" y1="350" x2="600" y2="450" stroke="url(#connection-gradient)" stroke-width="2" opacity="0.5" />
+    <line x1="600" y1="350" x2="700" y2="450" stroke="url(#connection-gradient)" stroke-width="2" opacity="0.5" />
+    
+    <line x1="900" y1="350" x2="800" y2="450" stroke="url(#connection-gradient)" stroke-width="2" opacity="0.5" />
+    <line x1="900" y1="350" x2="900" y2="450" stroke="url(#connection-gradient)" stroke-width="2" opacity="0.5" />
+    <line x1="900" y1="350" x2="1000" y2="450" stroke="url(#connection-gradient)" stroke-width="2" opacity="0.5" />
+  </g>
+  
+  <!-- Glowing team member highlights -->
+  <g>
+    <circle cx="600" cy="200" r="50" fill="url(#team-glow)" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="5s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="300" cy="350" r="40" fill="url(#team-glow)" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="4s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="600" cy="350" r="40" fill="url(#team-glow)" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="4.5s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="900" cy="350" r="40" fill="url(#team-glow)" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="4.2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Abstract company elements -->
+  <g opacity="0.15">
+    <!-- Company building -->
+    <rect x="550" y="100" width="100" height="60" fill="#60a5fa" />
+    <polygon points="540,100 660,100 600,70" fill="#60a5fa" />
+    
+    <!-- Department icons -->
+    <!-- Technical department -->
+    <rect x="280" y="330" width="40" height="40" rx="5" ry="5" fill="#60a5fa" />
+    <line x1="290" y1="340" x2="310" y2="360" stroke="#ffffff" stroke-width="2" />
+    <line x1="290" y1="360" x2="310" y2="340" stroke="#ffffff" stroke-width="2" />
+    
+    <!-- Management department -->
+    <rect x="580" y="330" width="40" height="40" rx="5" ry="5" fill="#60a5fa" />
+    <line x1="590" y1="350" x2="610" y2="350" stroke="#ffffff" stroke-width="2" />
+    <line x1="600" y1="340" x2="600" y2="360" stroke="#ffffff" stroke-width="2" />
+    
+    <!-- Customer service department -->
+    <rect x="880" y="330" width="40" height="40" rx="5" ry="5" fill="#60a5fa" />
+    <circle cx="900" cy="350" r="10" stroke="#ffffff" stroke-width="2" fill="none" />
+  </g>
+  
+  <!-- Animated connection pulses -->
+  <g>
+    <!-- Pulse 1 -->
+    <circle cx="600" cy="200" r="5" fill="#ffffff" opacity="0.8">
+      <animate attributeName="cx" values="600;450;300" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="200;275;350" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;0.4;0" dur="2s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Pulse 2 -->
+    <circle cx="600" cy="200" r="5" fill="#ffffff" opacity="0.8">
+      <animate attributeName="cx" values="600;600;600" dur="2.5s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="200;275;350" dur="2.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;0.4;0" dur="2.5s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Pulse 3 -->
+    <circle cx="600" cy="200" r="5" fill="#ffffff" opacity="0.8">
+      <animate attributeName="cx" values="600;750;900" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="200;275;350" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;0.4;0" dur="3s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Overlay gradient for depth -->
+  <rect width="1200" height="600" fill="url(#bg-gradient)" opacity="0.2" />
+</svg>

@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    
+    <!-- Connection glow -->
+    <radialGradient id="connection-glow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0" />
+    </radialGradient>
+    
+    <!-- Message bubble gradient -->
+    <linearGradient id="message-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Base background -->
+  <rect width="1200" height="600" fill="url(#bg-gradient)" />
+  
+  <!-- Abstract grid pattern -->
+  <g stroke="#334155" stroke-width="0.5" opacity="0.2">
+    <!-- Horizontal lines -->
+    <line x1="0" y1="100" x2="1200" y2="100" />
+    <line x1="0" y1="200" x2="1200" y2="200" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="0" y1="400" x2="1200" y2="400" />
+    <line x1="0" y1="500" x2="1200" y2="500" />
+    
+    <!-- Vertical lines -->
+    <line x1="100" y1="0" x2="100" y2="600" />
+    <line x1="300" y1="0" x2="300" y2="600" />
+    <line x1="500" y1="0" x2="500" y2="600" />
+    <line x1="700" y1="0" x2="700" y2="600" />
+    <line x1="900" y1="0" x2="900" y2="600" />
+    <line x1="1100" y1="0" x2="1100" y2="600" />
+  </g>
+  
+  <!-- Communication nodes -->
+  <g>
+    <!-- Main nodes -->
+    <circle cx="200" cy="200" r="30" fill="#1e40af" opacity="0.7" />
+    <circle cx="600" cy="300" r="40" fill="#1e40af" opacity="0.7" />
+    <circle cx="1000" cy="400" r="35" fill="#1e40af" opacity="0.7" />
+    
+    <!-- Connection lines -->
+    <line x1="200" y1="200" x2="600" y2="300" stroke="#60a5fa" stroke-width="2" opacity="0.5">
+      <animate attributeName="opacity" values="0.5;0.8;0.5" dur="3s" repeatCount="indefinite" />
+    </line>
+    <line x1="600" y1="300" x2="1000" y2="400" stroke="#60a5fa" stroke-width="2" opacity="0.5">
+      <animate attributeName="opacity" values="0.5;0.8;0.5" dur="4s" repeatCount="indefinite" />
+    </line>
+    
+    <!-- Secondary nodes -->
+    <circle cx="400" cy="150" r="15" fill="#1e40af" opacity="0.5" />
+    <circle cx="800" cy="250" r="20" fill="#1e40af" opacity="0.5" />
+    <circle cx="300" cy="400" r="18" fill="#1e40af" opacity="0.5" />
+    <circle cx="700" cy="450" r="22" fill="#1e40af" opacity="0.5" />
+    <circle cx="900" cy="150" r="17" fill="#1e40af" opacity="0.5" />
+    
+    <!-- Secondary connections -->
+    <line x1="200" y1="200" x2="400" y2="150" stroke="#60a5fa" stroke-width="1.5" opacity="0.4" />
+    <line x1="400" y1="150" x2="600" y2="300" stroke="#60a5fa" stroke-width="1.5" opacity="0.4" />
+    <line x1="600" y1="300" x2="800" y2="250" stroke="#60a5fa" stroke-width="1.5" opacity="0.4" />
+    <line x1="800" y1="250" x2="1000" y2="400" stroke="#60a5fa" stroke-width="1.5" opacity="0.4" />
+    <line x1="200" y1="200" x2="300" y2="400" stroke="#60a5fa" stroke-width="1.5" opacity="0.4" />
+    <line x1="300" y1="400" x2="600" y2="300" stroke="#60a5fa" stroke-width="1.5" opacity="0.4" />
+    <line x1="600" y1="300" x2="700" y2="450" stroke="#60a5fa" stroke-width="1.5" opacity="0.4" />
+    <line x1="700" y1="450" x2="1000" y2="400" stroke="#60a5fa" stroke-width="1.5" opacity="0.4" />
+    <line x1="600" y1="300" x2="900" y2="150" stroke="#60a5fa" stroke-width="1.5" opacity="0.4" />
+    <line x1="900" y1="150" x2="1000" y2="400" stroke="#60a5fa" stroke-width="1.5" opacity="0.4" />
+  </g>
+  
+  <!-- Glowing connection points -->
+  <g>
+    <circle cx="200" cy="200" r="40" fill="url(#connection-glow)" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="4s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="600" cy="300" r="50" fill="url(#connection-glow)" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="1000" cy="400" r="45" fill="url(#connection-glow)" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="4.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Data packets -->
+  <g>
+    <!-- Packet 1 -->
+    <circle cx="200" cy="200" r="3" fill="#ffffff">
+      <animate attributeName="cx" values="200;300;400;500;600" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="200;225;250;275;300" dur="3s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Packet 2 -->
+    <circle cx="600" cy="300" r="3" fill="#ffffff">
+      <animate attributeName="cx" values="600;700;800;900;1000" dur="3.5s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="300;325;350;375;400" dur="3.5s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Packet 3 -->
+    <circle cx="600" cy="300" r="3" fill="#ffffff">
+      <animate attributeName="cx" values="600;550;500;450;400;350;300" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="300;325;350;375;375;375;400" dur="4s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Packet 4 -->
+    <circle cx="1000" cy="400" r="3" fill="#ffffff">
+      <animate attributeName="cx" values="1000;900;800;700;600" dur="3.2s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="400;375;350;325;300" dur="3.2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Communication symbols -->
+  <g>
+    <!-- Message bubble 1 -->
+    <path d="M180,160 Q170,150 180,140 H220 Q230,140 230,150 V190 Q230,200 220,200 H190 L180,210 V200 H180 Q170,200 170,190 V170 Q170,160 180,160 Z" 
+          fill="url(#message-gradient)" opacity="0.8" />
+    
+    <!-- Message bubble 2 -->
+    <path d="M580,260 Q570,250 580,240 H620 Q630,240 630,250 V290 Q630,300 620,300 H590 L580,310 V300 H580 Q570,300 570,290 V270 Q570,260 580,260 Z" 
+          fill="url(#message-gradient)" opacity="0.8" />
+    
+    <!-- Message bubble 3 -->
+    <path d="M980,360 Q970,350 980,340 H1020 Q1030,340 1030,350 V390 Q1030,400 1020,400 H990 L980,410 V400 H980 Q970,400 970,390 V370 Q970,360 980,360 Z" 
+          fill="url(#message-gradient)" opacity="0.8" />
+    
+    <!-- Email icon -->
+    <rect x="380" y="130" width="40" height="30" rx="5" ry="5" fill="#3b82f6" opacity="0.8" />
+    <polyline points="380,135 400,150 420,135" stroke="#ffffff" stroke-width="1.5" fill="none" />
+    
+    <!-- Phone icon -->
+    <rect x="780" y="230" width="20" height="35" rx="3" ry="3" fill="#3b82f6" opacity="0.8" />
+    <circle cx="790" cy="255" r="3" fill="#ffffff" />
+    
+    <!-- Location pin -->
+    <path d="M890,140 Q880,120 890,100 A10,10 0 0,1 910,100 Q920,120 910,140 L900,150 Z" fill="#3b82f6" opacity="0.8" />
+    <circle cx="900" cy="115" r="5" fill="#ffffff" />
+  </g>
+  
+  <!-- Overlay gradient for depth -->
+  <rect width="1200" height="600" fill="url(#bg-gradient)" opacity="0.2" />
+</svg>

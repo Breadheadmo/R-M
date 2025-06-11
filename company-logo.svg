@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6600;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff9900;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <g>
+    <rect x="10" y="10" width="40" height="30" rx="5" fill="url(#grad)" />
+    <text x="60" y="32" font-family="Arial" font-size="24" font-weight="bold" fill="#ffffff">GROUP</text>
+    <path d="M20,25 L30,15 L40,25 L30,35 Z" fill="#ffffff" />
+  </g>
+</svg>
