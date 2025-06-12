@@ -157,6 +157,35 @@
             color: rgba(255, 255, 255, 0.7);
         }
 
+        .form-section-title {
+            color: #ff6600;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(255, 102, 0, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 8px;
+            width: 16px;
+            height: 16px;
+            accent-color: #ff6600;
+        }
+
         .job-application-form button[type="submit"] {
             grid-column: 1 / -1;
             justify-self: center;
@@ -289,8 +318,32 @@
     <section class="careers-hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Join Our Sales Team</h1>
-                <p>Apply for our Field Sales Agent position at Brand Group</p>
+                <h1 class="shimmer-text">Join Our Team</h1>
+                <p>Be part of our mission to revolutionize telecommunications and business solutions</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners-section">
+        <div class="container">
+            <div class="swiper partners-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/Supersonic-logo.png" alt="Supersonic">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/FNO_Vumatel_11000px.png" alt="Vuma">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/Vodacom-Logo.wine.png" alt="Vodacom">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/Huawei_Standard_logo.svg.png" alt="Huawei">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/BRITELINK-LOGO-white-RGB.png" alt="Britelink">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -327,63 +380,131 @@
             <p>Fill out the form below to apply for one of our open positions. We look forward to learning more about you and your qualifications.</p>
             
             <form class="job-application-form">
+                <!-- Basic Information -->
+                <div class="form-group full-width">
+                    <h3 class="form-section-title">Basic Information</h3>
+                </div>
                 <div class="form-group">
                     <label for="full-name">Full Name</label>
                     <input type="text" id="full-name" placeholder="Your full name" required>
                     <span class="input-icon"><i class="fas fa-user"></i></span>
                 </div>
-                
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" placeholder="Your email address" required>
-                    <span class="input-icon"><i class="fas fa-envelope"></i></span>
-                </div>
-                
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
                     <input type="tel" id="phone" placeholder="Your phone number" required>
                     <span class="input-icon"><i class="fas fa-phone"></i></span>
                 </div>
-                
                 <div class="form-group">
-                    <label for="position">Position Applying For</label>
-                    <select id="position" name="position" required>
-                        <option value="">Select a position</option>
-                        <option value="field-sales-agent">Field Sales Agent</option>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Your email address" required>
+                    <span class="input-icon"><i class="fas fa-envelope"></i></span>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location / Area of Residence</label>
+                    <input type="text" id="location" placeholder="Your current location" required>
+                    <span class="input-icon"><i class="fas fa-map-marker-alt"></i></span>
+                </div>
+
+                <!-- Experience & Qualifications -->
+                <div class="form-group full-width">
+                    <h3 class="form-section-title">Experience & Qualifications</h3>
+                </div>
+                <div class="form-group">
+                    <label for="sales-experience">Do you have previous field sales experience?</label>
+                    <select id="sales-experience" required>
+                        <option value="">Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
                     </select>
-                    <span class="input-icon"><i class="fas fa-briefcase"></i></span>
                 </div>
-                
-                <div class="form-group">
-                    <label for="experience">Years of Experience</label>
-                    <input type="number" id="experience" min="0" max="50" placeholder="Years of relevant experience" required>
-                    <span class="input-icon"><i class="fas fa-clock"></i></span>
+                <div class="form-group full-width">
+                    <label for="sales-description">If yes, briefly describe your field sales experience</label>
+                    <textarea id="sales-description" rows="3" placeholder="Describe your experience (industry, products, duration)"></textarea>
                 </div>
-                
                 <div class="form-group">
-                    <label for="start-date">Available Start Date</label>
+                    <label for="experience-years">How many years of sales experience do you have?</label>
+                    <select id="experience-years" required>
+                        <option value="">Select experience range</option>
+                        <option value="less-than-1">Less than 1 year</option>
+                        <option value="1-2">1–2 years</option>
+                        <option value="3-5">3–5 years</option>
+                        <option value="5-plus">5+ years</option>
+                    </select>
+                </div>
+                <div class="form-group full-width">
+                    <label>Which industries have you sold in before?</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="industry" value="fmcg"> FMCG</label>
+                        <label><input type="checkbox" name="industry" value="insurance"> Insurance</label>
+                        <label><input type="checkbox" name="industry" value="telecom"> Telecom</label>
+                        <label><input type="checkbox" name="industry" value="real-estate"> Real Estate</label>
+                        <label><input type="checkbox" name="industry" value="services"> Services</label>
+                        <label><input type="checkbox" name="industry" value="other"> Other</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="qualifications">Do you have any formal sales or marketing training?</label>
+                    <select id="qualifications" required>
+                        <option value="">Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="form-group full-width">
+                    <label for="qualifications-description">If yes, please describe your qualifications</label>
+                    <textarea id="qualifications-description" rows="2" placeholder="Describe your sales/marketing qualifications"></textarea>
+                </div>
+
+                <!-- Availability & Logistics -->
+                <div class="form-group full-width">
+                    <h3 class="form-section-title">Availability & Logistics</h3>
+                </div>
+                <div class="form-group">
+                    <label for="availability">Available Work Schedule</label>
+                    <select id="availability" required>
+                        <option value="">Select availability</option>
+                        <option value="full-time">Full-time</option>
+                        <option value="part-time">Part-time</option>
+                        <option value="flexible">Flexible</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="transportation">Do you have access to reliable transportation?</label>
+                    <select id="transportation" required>
+                        <option value="">Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="coverage-areas">Which areas or regions are you willing to cover?</label>
+                    <input type="text" id="coverage-areas" placeholder="List the areas you can cover" required>
+                </div>
+                <div class="form-group">
+                    <label for="start-date">When can you start?</label>
                     <input type="date" id="start-date" required>
                     <span class="input-icon"><i class="fas fa-calendar"></i></span>
                 </div>
-                
+
+                <!-- Sales Skills & Motivation -->
                 <div class="form-group full-width">
-                    <label for="resume">Upload Resume/CV</label>
-                    <div class="file-upload">
-                        <label for="resume-file" class="file-upload-btn">
-                            <i class="fas fa-upload"></i> Choose File
-                        </label>
-                        <input type="file" id="resume-file" accept=".pdf,.doc,.docx" required>
-                        <span class="file-name">No file chosen</span>
-                    </div>
+                    <h3 class="form-section-title">Sales Skills & Motivation</h3>
                 </div>
-                
                 <div class="form-group full-width">
-                    <label for="cover-letter">Cover Letter</label>
-                    <textarea id="cover-letter" rows="5" placeholder="Tell us why you're interested in this position and what makes you a great fit" required></textarea>
-                    <span class="input-icon"><i class="fas fa-pen"></i></span>
+                    <label for="motivation">What motivates you to succeed in sales?</label>
+                    <textarea id="motivation" rows="3" placeholder="Describe what drives you to succeed in sales" required></textarea>
                 </div>
-                
+                <div class="form-group">
+                    <label for="performance-targets">Are you comfortable with performance targets and commission-based earnings?</label>
+                    <select id="performance-targets" required>
+                        <option value="">Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
                 <button type="submit" class="btn btn-primary">Submit Application</button>
+            </form>
             </form>
         </div>
     </section>

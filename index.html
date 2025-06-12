@@ -27,7 +27,7 @@
                         <li><a href="promotional-merchandising.html">Promotional Merchandising</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Check Coverage</a></li>
+                <li><a href="check-coverage.html">Check Coverage</a></li>
                 <li><a href="careers.html">Careers</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
@@ -260,12 +260,24 @@
 
     <section class="partners-section">
         <div class="container">
-            <div class="partners-logos">
-                <img src="vodacom-logo.svg" alt="Vodacom">
-                <img src="huawei-logo.svg" alt="Huawei">
-                <img src="skytel-logo.svg" alt="Skytel">
-                <img src="supersonic-logo.svg" alt="Supersonic">
-                <img src="vuma-logo.svg" alt="Vuma">
+            <div class="swiper partners-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/Supersonic-logo.png" alt="Supersonic">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/FNO_Vumatel_11000px.png" alt="Vuma">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/Vodacom-Logo.wine.png" alt="Vodacom">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/Huawei_Standard_logo.svg.png" alt="Huawei">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/BRITELINK-LOGO-white-RGB.png" alt="Britelink">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -346,7 +358,26 @@
     <script src="script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Initialize Swiper
+            // Initialize Partners Slider
+            const partnersSwiper = new Swiper('.partners-slider', {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 3,
+                    },
+                    992: {
+                        slidesPerView: 5,
+                    }
+                }
+            });
+
+            // Initialize Services Swiper
             const servicesSwiper = new Swiper('.services-carousel', {
                 // Optional parameters
                 slidesPerView: 1,

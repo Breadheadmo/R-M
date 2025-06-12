@@ -1,3 +1,212 @@
+/* Coverage Page Styles */
+.coverage-hero {
+    padding: 150px 0 100px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/hero-bg.svg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.coverage-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 102, 0, 0.15) 0%, transparent 70%);
+    animation: pulse-coverage 4s infinite alternate;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes pulse-coverage {
+    0% { opacity: 0.3; }
+    100% { opacity: 0.7; }
+}
+
+.coverage-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.coverage-check-section {
+    padding: 80px 0;
+    background-color: #111;
+    position: relative;
+}
+
+.coverage-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #1a1a1a;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 102, 0, 0.1);
+}
+
+.coverage-form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.coverage-form-header h2 {
+    color: #ff6600;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.coverage-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.coverage-form .form-group {
+    position: relative;
+}
+
+.coverage-form .form-group input {
+    width: 100%;
+    padding: 15px 20px;
+    padding-right: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.coverage-form .form-group input:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 2px rgba(255, 102, 0, 0.3);
+    outline: none;
+}
+
+.coverage-form .form-group .input-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ff6600;
+}
+
+.coverage-form button[type="submit"] {
+    grid-column: 1 / -1;
+    justify-self: center;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    width: auto;
+    min-width: 200px;
+}
+
+.coverage-info-section {
+    padding: 80px 0;
+    background-color: #000;
+}
+
+.coverage-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.coverage-info-card {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 102, 0, 0.1);
+}
+
+.coverage-info-card:hover {
+    transform: translateY(-10px);
+}
+
+.info-icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 102, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.info-icon i {
+    font-size: 24px;
+    color: #ff6600;
+}
+
+.coverage-info-card h3 {
+    color: #ff6600;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.coverage-info-card p {
+    color: #fff;
+    opacity: 0.8;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .coverage-form {
+        grid-template-columns: 1fr;
+    }
+
+    .coverage-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .coverage-form-container {
+        padding: 20px;
+        margin: 0 15px;
+    }
+}
+
+/* Partners Section Styles */
+.partners-section {
+    padding: 60px 0;
+    background-color: #111;
+}
+
+.partners-slider {
+    padding: 20px 0;
+}
+
+.partners-slider .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.partners-slider .swiper-slide img {
+    max-width: 150px;
+    height: auto;
+    filter: grayscale(100%) brightness(200%);
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.partners-slider .swiper-slide img:hover {
+    filter: grayscale(0%) brightness(100%);
+    opacity: 1;
+}
+
 /* Reset and Base Styles */
 * {
     margin: 0;
