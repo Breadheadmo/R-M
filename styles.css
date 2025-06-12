@@ -982,8 +982,9 @@ ul {
 
 /* About Page Styles */
 .about-hero {
-  background: url('images/hero-bg.svg') no-repeat center center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/hero-bg.svg');
   background-size: cover;
+  background-position: center;
   background-attachment: fixed; /* Parallax effect */
   padding: 150px 0 100px;
   text-align: center;
