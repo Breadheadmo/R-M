@@ -982,7 +982,7 @@ ul {
 
 /* About Page Styles */
 .about-hero {
-  background: url('images/about-bg.svg') no-repeat center center;
+  background: url('images/hero-bg.svg') no-repeat center center;
   background-size: cover;
   background-attachment: fixed; /* Parallax effect */
   padding: 150px 0 100px;
