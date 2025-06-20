@@ -54,16 +54,18 @@
                     <div class="contact-icon">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <h3>Our Location</h3>
                     <p>55 Richards Drive</p>
                     <p>Halfway House</p>
+                    <p>Midrand, Johannesburg, Gauteng 1685</p>
+                    <p>Phone: +27 87 288 3482 / 3483</p>
+                    <p>Email: sales@rmgp.co.za</p>
                 </div>
                 <div class="contact-info-card">
                     <div class="contact-icon">
                         <i class="fas fa-phone-alt"></i>
                     </div>
                     <h3>Phone Number</h3>
-                    <p>+27 11 123 4567</p>
+                    <p>+27 87 288 3482 / 3483</p>
                     <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
                 </div>
                 <div class="contact-info-card">
@@ -71,8 +73,7 @@
                         <i class="fas fa-envelope"></i>
                     </div>
                     <h3>Email Address</h3>
-                    <p>info@brandgroup.co.za</p>
-                    <p>support@brandgroup.co.za</p>
+                    <p>sales@rmgp.co.za</p>
                 </div>
             </div>
         </div>
@@ -86,23 +87,23 @@
                 
                 <form class="contact-form">
                     <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+                        <input type="text" name="name" placeholder="Your Name" required>
                         <span class="input-icon"><i class="fas fa-user"></i></span>
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Company Name" required>
+                        <input type="text" name="company" placeholder="Company Name" required>
                         <span class="input-icon"><i class="fas fa-building"></i></span>
                     </div>
                     <div class="form-group">
-                        <input type="tel" placeholder="Contact Number" required>
+                        <input type="tel" name="phone" placeholder="Contact Number" required>
                         <span class="input-icon"><i class="fas fa-phone"></i></span>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Email" required>
+                        <input type="email" name="email" placeholder="Email" required>
                         <span class="input-icon"><i class="fas fa-envelope"></i></span>
                     </div>
                     <div class="form-group full-width">
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                         <span class="input-icon"><i class="fas fa-comment"></i></span>
                     </div>
                     <button type="submit" class="btn btn-primary">Send Message</button>
@@ -115,11 +116,7 @@
         <div class="container">
             <h2>Find Us On The Map</h2>
             <div class="map-container">
-                <!-- Placeholder for map - in a real implementation, you would add Google Maps or another map service here -->
-                <div class="map-placeholder">
-                    <i class="fas fa-map-marked-alt"></i>
-                    <p>Interactive Map Would Be Displayed Here</p>
-                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3587.0307622249!2d28.1217!3d-25.9985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e956e0fde5c0e7d%3A0x5f75d8ad8da7e2f0!2s55%20Richard%20Dr%2C%20Halfway%20House%2C%20Midrand%2C%201685!5e0!3m2!1sen!2sza!4v1652345678901!5m2!1sen!2sza" width="100%" height="450" style="border:0; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
@@ -152,9 +149,11 @@
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Get In Touch</h3>
                     <p>55 Richards Drive</p>
                     <p>Halfway House</p>
+                    <p>Midrand, Johannesburg, Gauteng 1685</p>
+                    <p>Phone: +27 87 288 3482 / 3483</p>
+                    <p>Email: sales@rmgp.co.za</p>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -162,12 +161,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2023 Brand Group Pty Ltd</p>
+                <p>© 2025 R&M Group Pty Ltd</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
-    <script src="https://app.dante-ai.com/bubble-embed.js?kb_id=1cf80d85-c7b6-46b9-bf91-da145c816d22&token=7ac6b136-2d9d-4ccc-bedb-44803d2c4305&modeltype=gpt-4-omnimodel-mini&tabs=false"></script>
+    <script>
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="VIVglEEpCNfDuTveZ18Iu";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
 </body>
 </html>

@@ -55,13 +55,49 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Basic form submission handling
+    // Form submission handling with Google Sheets integration
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            contactForm.reset();
+            // Create an object from form data
+            const formData = new FormData(this);
+            const formObject = {};
+            formData.forEach((value, key) => {
+                formObject[key] = value;
+            });
+
+            // Show loading state
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+
+            // Log the data being sent
+            console.log('Sending form data:', formObject);
+
+            fetch('https://script.google.com/macros/s/AKfycbx2WvKmBkRGF_G1p_3Mvk6noOuIJDlVp0BOYEvuSvFn/exec', {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formObject)
+            })
+            .then(() => {
+                // With no-cors mode, we can't access the response
+                // but if we reach here, the request was sent successfully
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting the form. Please try again.');
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
+            });
         });
     }
 

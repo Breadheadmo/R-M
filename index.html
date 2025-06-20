@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <nav class="main-nav">
         <div class="container">
             <div class="logo">
-                <a href="#"><img src="images/R&M.png" alt="Company Logo"></a>
+                <a href="index.html"><img src="images/R&M.png" alt="Company Logo"></a>
             </div>
             <ul class="nav-links">
-                <li><a href="#" class="active">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li class="dropdown">
                     <a href="#services" class="dropdown-toggle">What We Do <i class="fas fa-chevron-down"></i></a>
@@ -42,14 +43,16 @@
     <header class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>We aspire to be the leader in<br>all sectors that we serve!</h1>
-                <p>We create customized services to meet the needs of<br>our clients - if you can think it, we can build it!</p>
+                <h1 class="shimmer-text">Custom solutions for every business from startups to enterprises</h1>
+                <p class="fade-in">R&M Group powers smart, reliable fibre solutions for your business.</p>
                 <div class="hero-buttons">
-                    <a href="about.html" class="btn btn-secondary">About Us</a>
-                    <a href="#contact" class="btn btn-primary">Work With Us</a>
+                    <a href="#get-started" class="btn btn-primary">Get Started</a>
+                    <a href="#quote" class="btn btn-secondary">Request a Quote</a>
+                    <a href="contact.html" class="btn btn-outline">Contact Us</a>
                 </div>
             </div>
         </div>
+        <div class="hero-overlay"></div>
     </header>
 
     <section class="services-section">
@@ -72,8 +75,8 @@
                                 <div class="service-image">
                                     <img src="images/ftth-fttb.svg" alt="FTTH/FTTB Illustration" class="service-svg">
                                 </div>
-                                <h3>FTTH/FTTB</h3>
-                                <p>High-speed fiber optic internet directly to homes and businesses for unmatched reliability and performance.</p>
+                                <h3>FTTH/FTTB Solutions</h3>
+                                <p>Exceptional uncapped and unshaped fibre solutions designed for both residential and business environments, ensuring high-speed internet access.</p>
                                 <div class="service-links">
                                     <a href="ftth.html">Learn More</a>
                                     <a href="contact.html">Get a Quote</a>
@@ -115,7 +118,7 @@
                                     <img src="images/wireless-connectivity.svg" alt="Wireless Connectivity Illustration" class="service-svg">
                                 </div>
                                 <h3>Wireless Connectivity</h3>
-                                <p>Reliable wireless solutions for seamless connectivity across your premises.</p>
+                                <p>Uninterrupted and unlimited internet connectivity solutions, available 24/7/365, ensuring that you remain connected at all times.</p>
                                 <div class="service-links">
                                     <a href="wireless-connectivity.html">Learn More</a>
                                     <a href="contact.html">Get a Quote</a>
@@ -157,7 +160,7 @@
                                     <img src="images/promotional-merchandising.svg" alt="Promotional Merchandising Illustration" class="service-svg">
                                 </div>
                                 <h3>Promotional Merchandising</h3>
-                                <p>Custom branded products and promotional items to enhance your brand visibility.</p>
+                                <p>Specialized low-cost production and widespread distribution of branded goods, aimed at enhancing brand awareness and visibility.</p>
                                 <div class="service-links">
                                     <a href="promotional-merchandising.html">Learn More</a>
                                     <a href="contact.html">Get a Quote</a>
@@ -178,7 +181,7 @@
                                     <img src="images/fiber-optic-network.svg" alt="Fiber Optic Network Illustration" class="service-svg">
                                 </div>
                                 <h3>Electrical Engineering</h3>
-                                <p>Installation, maintenance & optimization of electrical grids & systems according to your needs.</p>
+                                <p>Expert assessment, design, and customization of electrical grids and systems, tailored to meet your specific requirements.</p>
                                 <div class="service-links">
                                     <a href="#">Learn More</a>
                                     <a href="contact.html">Get a Quote</a>
@@ -199,40 +202,167 @@
         </div>
     </section>
 
+    <section class="core-services" id="core-services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">OUR CORE SERVICES</span>
+                <h2>Comprehensive Connectivity Solutions</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-item" data-aos="fade-up">
+                    <div class="service-content">
+                        <h3>Sales & Product Advisory</h3>
+                        <p>We consult with clients to determine their business connectivity needs and offer the best-fit networking solutions.</p>
+                        <ul class="service-highlights">
+                            <li><i class="fas fa-check-circle"></i> Expert consultation on network architecture</li>
+                            <li><i class="fas fa-check-circle"></i> Product sourcing from leading tech vendors</li>
+                            <li><i class="fas fa-check-circle"></i> Custom hardware/software recommendations</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-content">
+                        <h3>Internet Solutions</h3>
+                        <p>R&M offers personalized internet packages, ideal for both small startups and growing enterprises.</p>
+                        <ul class="service-highlights">
+                            <li><i class="fas fa-check-circle"></i> High-speed broadband solutions</li>
+                            <li><i class="fas fa-check-circle"></i> Flexible bandwidth packages</li>
+                            <li><i class="fas fa-check-circle"></i> Static IP options for business use</li>
+                            <li><i class="fas fa-check-circle"></i> Business uptime guarantees</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-content">
+                        <h3>Fibre Reseller Services</h3>
+                        <p>As an accredited reseller, R&M Group partners with leading fibre providers to deliver optimized, cost-effective fibre to your premises.</p>
+                        <ul class="service-highlights">
+                            <li><i class="fas fa-check-circle"></i> Competitive fibre pricing</li>
+                            <li><i class="fas fa-check-circle"></i> White-labeled solutions for ISPs</li>
+                            <li><i class="fas fa-check-circle"></i> SLA-backed fibre access</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-content">
+                        <h3>Fibre Installations</h3>
+                        <p>From trenching and cabling to final testing and deployment, R&M's team of technicians handles the full fibre installation lifecycle.</p>
+                        <ul class="service-highlights">
+                            <li><i class="fas fa-check-circle"></i> Site surveys & infrastructure assessments</li>
+                            <li><i class="fas fa-check-circle"></i> Civil works (trenching, ducting, backfilling)</li>
+                            <li><i class="fas fa-check-circle"></i> Termination, splicing & activation</li>
+                            <li><i class="fas fa-check-circle"></i> Post-installation testing and support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="target-audience" id="who-we-serve">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">WHO WE WORK WITH</span>
+                <h2>Tailored Solutions for Every Business</h2>
+            </div>
+            <div class="audience-grid">
+                <div class="audience-card" data-aos="flip-left">
+                    <div class="audience-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Startups</h3>
+                    <p>Flexible, affordable internet solutions to fuel your growth</p>
+                </div>
+                <div class="audience-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="audience-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Medium Businesses</h3>
+                    <p>Robust networking solutions for expanding operations</p>
+                </div>
+                <div class="audience-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="audience-icon">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <h3>Enterprises</h3>
+                    <p>High-capacity fibre solutions for complex requirements</p>
+                </div>
+                <div class="audience-card" data-aos="flip-left" data-aos-delay="300">
+                    <div class="audience-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Educational Institutions</h3>
+                    <p>Specialized connectivity for learning environments</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="company-snapshot parallax-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">COMPANY SNAPSHOT</span>
+                <h2>Your Trusted Technology Partner</h2>
+            </div>
+            <div class="snapshot-grid">
+                <div class="snapshot-item" data-aos="zoom-in">
+                    <div class="snapshot-icon"><i class="fas fa-flag"></i></div>
+                    <div class="snapshot-label">Founded</div>
+                    <div class="snapshot-value">2011</div>
+                </div>
+                <div class="snapshot-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="snapshot-icon"><i class="fas fa-industry"></i></div>
+                    <div class="snapshot-label">Industry</div>
+                    <div class="snapshot-value">Telecommunications, Fibre, Internet</div>
+                </div>
+                <div class="snapshot-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="snapshot-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="snapshot-label">Location</div>
+                    <div class="snapshot-value">Block AF3, Gallagher Business Exchange, Midrand</div>
+                </div>
+                <div class="snapshot-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="snapshot-icon"><i class="fas fa-globe-africa"></i></div>
+                    <div class="snapshot-label">Service Reach</div>
+                    <div class="snapshot-value">South Africa, primarily Gauteng</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="why-choose-us">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">WHY CHOOSE US</span>
-                <h2>Your Technology Partner for Success</h2>
+                <span class="section-tag">WHAT SETS US APART</span>
+                <h2>The R&M Group Advantage</h2>
             </div>
             <div class="features-grid">
-                <div class="feature-box">
-                    <div class="feature-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3>Innovation First</h3>
-                    <p>We stay ahead of technological trends to deliver cutting-edge solutions that give your business a competitive advantage.</p>
-                </div>
-                <div class="feature-box">
-                    <div class="feature-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3>Trusted Partnership</h3>
-                    <p>With over a decade of experience, we've built lasting relationships with clients through reliable service and dedicated support.</p>
-                </div>
-                <div class="feature-box">
+                <div class="feature-box" data-aos="fade-right">
                     <div class="feature-icon">
                         <i class="fas fa-cogs"></i>
                     </div>
-                    <h3>Custom Solutions</h3>
-                    <p>Every business is unique. We tailor our services to match your specific needs and growth objectives.</p>
+                    <h3>Tailored Connectivity</h3>
+                    <p>No off-the-shelf packages. Every solution is built based on your specific business model, size, and traffic.</p>
                 </div>
-                <div class="feature-box">
+                <div class="feature-box" data-aos="fade-right" data-aos-delay="100">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Enterprise Security</h3>
-                    <p>Your data security is our priority. We implement robust security measures across all our services.</p>
+                    <h3>Reliability</h3>
+                    <p>Infrastructure that supports always-on internet and fast resolutions.</p>
+                </div>
+                <div class="feature-box" data-aos="fade-right" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>All-in-One Provider</h3>
+                    <p>From consultation to installation — your one-stop connectivity partner.</p>
+                </div>
+                <div class="feature-box" data-aos="fade-right" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Client-First Approach</h3>
+                    <p>You'll always speak to someone who understands your business.</p>
                 </div>
             </div>
             <div class="stats-container">
@@ -337,9 +467,11 @@
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Get In Touch</h3>
                     <p>55 Richards Drive</p>
                     <p>Halfway House</p>
+                    <p>Midrand, Johannesburg, Gauteng 1685</p>
+                    <p>Phone: +27 87 288 3482 / 3483</p>
+                    <p>Email: sales@rmgp.co.za</p>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -347,12 +479,20 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2023 Brand Group Pty Ltd</p>
+                <p>© 2025 R&M Group Pty Ltd</p>
             </div>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
     <script src="script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -414,6 +554,8 @@
             });
         });
     </script>
-    <script src="https://app.dante-ai.com/bubble-embed.js?kb_id=1cf80d85-c7b6-46b9-bf91-da145c816d22&token=7ac6b136-2d9d-4ccc-bedb-44803d2c4305&modeltype=gpt-4-omnimodel-mini&tabs=false"></script>
+    <script>
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="VIVglEEpCNfDuTveZ18Iu";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
 </body>
 </html>
