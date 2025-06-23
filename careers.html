@@ -41,7 +41,6 @@
         <div class="container">
             <div class="hero-content" style="text-align: center;">
                 <h1 class="shimmer-text">Join Our Team</h1>
-                <p style="padding: 0 20px;">Be part of our mission to revolutionize telecommunications and business solutions</p>
             </div>
         </div>
     </section>
@@ -55,7 +54,7 @@
             <div class="position-card">
                 <h3>Field Sales Agent</h3>
                 <div class="position-meta">
-                    <span><i class="fas fa-map-marker-alt"></i> Sandton, Johannesburg</span>
+                    <span><i class="fas fa-map-marker-alt"></i> 55 Richards Drive Midrand, Johannesburg</span>
                     <span><i class="fas fa-briefcase"></i> Full-time</span>
                     <span><i class="fas fa-graduation-cap"></i> 1+ years experience</span>
                     <span><i class="fas fa-car"></i> Valid driver's license required</span>
@@ -79,29 +78,29 @@
             <h2>Apply For a Position</h2>
             <p>Fill out the form below to apply for one of our open positions. We look forward to learning more about you and your qualifications.</p>
             
-            <form class="job-application-form">
+            <form class="job-application-form" name="submit-to-google-sheet">
                 <!-- Basic Information -->
                 <div class="form-group full-width">
                     <h3 class="form-section-title">Basic Information</h3>
                 </div>
                 <div class="form-group">
                     <label for="full-name">Full Name</label>
-                    <input type="text" id="full-name" placeholder="Your full name" required>
+                    <input type="text" id="full-name" name="fullName" placeholder="Your full name" required>
                     <span class="input-icon"><i class="fas fa-user"></i></span>
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" placeholder="Your phone number" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
                     <span class="input-icon"><i class="fas fa-phone"></i></span>
                 </div>
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" placeholder="Your email address" required>
+                    <input type="email" id="email" name="email" placeholder="Your email address" required>
                     <span class="input-icon"><i class="fas fa-envelope"></i></span>
                 </div>
                 <div class="form-group">
                     <label for="location">Location / Area of Residence</label>
-                    <input type="text" id="location" placeholder="Your current location" required>
+                    <input type="text" id="location" name="location" placeholder="Your current location" required>
                     <span class="input-icon"><i class="fas fa-map-marker-alt"></i></span>
                 </div>
 
@@ -111,7 +110,7 @@
                 </div>
                 <div class="form-group">
                     <label for="sales-experience">Do you have previous field sales experience?</label>
-                    <select id="sales-experience" required>
+                    <select id="sales-experience" name="salesExperience" required>
                         <option value="">Select an option</option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
@@ -119,11 +118,11 @@
                 </div>
                 <div class="form-group full-width">
                     <label for="sales-description">If yes, briefly describe your field sales experience</label>
-                    <textarea id="sales-description" rows="3" placeholder="Describe your experience (industry, products, duration)"></textarea>
+                    <textarea id="sales-description" name="salesDescription" rows="3" placeholder="Describe your experience (industry, products, duration)"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="experience-years">How many years of sales experience do you have?</label>
-                    <select id="experience-years" required>
+                    <select id="experience-years" name="experienceYears" required>
                         <option value="">Select experience range</option>
                         <option value="less-than-1">Less than 1 year</option>
                         <option value="1-2">1–2 years</option>
@@ -134,17 +133,17 @@
                 <div class="form-group full-width">
                     <label>Which industries have you sold in before?</label>
                     <div class="checkbox-group">
-                        <label><input type="checkbox" name="industry" value="fmcg"> FMCG</label>
-                        <label><input type="checkbox" name="industry" value="insurance"> Insurance</label>
-                        <label><input type="checkbox" name="industry" value="telecom"> Telecom</label>
-                        <label><input type="checkbox" name="industry" value="real-estate"> Real Estate</label>
-                        <label><input type="checkbox" name="industry" value="services"> Services</label>
-                        <label><input type="checkbox" name="industry" value="other"> Other</label>
+                        <label><input type="checkbox" name="industries" value="fmcg"> FMCG</label>
+                        <label><input type="checkbox" name="industries" value="insurance"> Insurance</label>
+                        <label><input type="checkbox" name="industries" value="telecom"> Telecom</label>
+                        <label><input type="checkbox" name="industries" value="real-estate"> Real Estate</label>
+                        <label><input type="checkbox" name="industries" value="services"> Services</label>
+                        <label><input type="checkbox" name="industries" value="other"> Other</label>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="qualifications">Do you have any formal sales or marketing training?</label>
-                    <select id="qualifications" required>
+                    <select id="qualifications" name="qualifications" required>
                         <option value="">Select an option</option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
@@ -152,7 +151,7 @@
                 </div>
                 <div class="form-group full-width">
                     <label for="qualifications-description">If yes, please describe your qualifications</label>
-                    <textarea id="qualifications-description" rows="2" placeholder="Describe your sales/marketing qualifications"></textarea>
+                    <textarea id="qualifications-description" name="qualificationsDescription" rows="2" placeholder="Describe your sales/marketing qualifications"></textarea>
                 </div>
 
                 <!-- Availability & Logistics -->
@@ -161,7 +160,7 @@
                 </div>
                 <div class="form-group">
                     <label for="availability">Available Work Schedule</label>
-                    <select id="availability" required>
+                    <select id="availability" name="availability" required>
                         <option value="">Select availability</option>
                         <option value="full-time">Full-time</option>
                         <option value="part-time">Part-time</option>
@@ -170,7 +169,7 @@
                 </div>
                 <div class="form-group">
                     <label for="transportation">Do you have access to reliable transportation?</label>
-                    <select id="transportation" required>
+                    <select id="transportation" name="transportation" required>
                         <option value="">Select an option</option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
@@ -178,11 +177,11 @@
                 </div>
                 <div class="form-group">
                     <label for="coverage-areas">Which areas or regions are you willing to cover?</label>
-                    <input type="text" id="coverage-areas" placeholder="List the areas you can cover" required>
+                    <input type="text" id="coverage-areas" name="coverageAreas" placeholder="List the areas you can cover" required>
                 </div>
                 <div class="form-group">
                     <label for="start-date">When can you start?</label>
-                    <input type="date" id="start-date" required>
+                    <input type="date" id="start-date" name="startDate" required>
                     <span class="input-icon"><i class="fas fa-calendar"></i></span>
                 </div>
 
@@ -192,11 +191,11 @@
                 </div>
                 <div class="form-group full-width">
                     <label for="motivation">What motivates you to succeed in sales?</label>
-                    <textarea id="motivation" rows="3" placeholder="Describe what drives you to succeed in sales" required></textarea>
+                    <textarea id="motivation" name="motivation" rows="3" placeholder="Describe what drives you to succeed in sales" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="performance-targets">Are you comfortable with performance targets and commission-based earnings?</label>
-                    <select id="performance-targets" required>
+                    <select id="performance-targets" name="performanceTargets" required>
                         <option value="">Select an option</option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
@@ -204,7 +203,6 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary">Submit Application</button>
-            </form>
             </form>
         </div>
     </section>
@@ -270,6 +268,107 @@
                 });
             });
         });
+    </script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbySlY81A0SfvtjuEaA1bk-ux7lg31-xssqh0SZr5iJm8IHxPs6LtK5delvw3cwq2-ML/exec';
+    const form = document.forms['submit-to-google-sheet'];
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        const formData = new FormData(form);
+
+        // Get checkbox values for industries
+        const selectedIndustries = Array.from(form.querySelectorAll('input[name="industries"]:checked'))
+            .map(cb => cb.value)
+            .join(', ');
+
+        // Format date to ensure consistency
+        const startDateValue = formData.get('startDate');
+        const formattedDate = startDateValue ? new Date(startDateValue).toISOString().split('T')[0] : '';
+
+        const data = {
+            timestamp: new Date().toISOString(),
+            fullName: formData.get('fullName'),
+            phone: formData.get('phone'),
+            email: formData.get('email'),
+            location: formData.get('location'),
+            salesExperience: formData.get('salesExperience'),
+            salesDescription: formData.get('salesDescription'),
+            experienceYears: formData.get('experienceYears'),
+            industries: selectedIndustries,
+            qualifications: formData.get('qualifications'),
+            qualificationsDescription: formData.get('qualificationsDescription'),
+            availability: formData.get('availability'),
+            transportation: formData.get('transportation'),
+            coverageAreas: formData.get('coverageAreas'),
+            startDate: formattedDate,
+            motivation: formData.get('motivation'),
+            performanceTargets: formData.get('performanceTargets')
+        };
+
+        // Log the collected data for debugging
+        console.log('Form data being sent:', data);
+
+        // Show loading state
+        const submitButton = form.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.textContent;
+        submitButton.textContent = 'Submitting...';
+        submitButton.disabled = true;
+
+        // Log the data being sent for debugging
+        console.log('Submitting form data:', data);
+        console.log('Sending form data:', data);
+
+        fetch(scriptURL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'text/plain'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => {
+            // Since we're using no-cors, we won't get a normal response
+            // Instead, we'll assume success if we reach this point
+            submitButton.textContent = originalButtonText;
+            submitButton.disabled = false;
+            
+            // Reset form and show success message
+            form.reset();
+            
+            // Reset checkboxes
+            form.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                checkbox.checked = false;
+            });
+            
+            // Reset select elements
+            form.querySelectorAll('select').forEach(select => {
+                select.selectedIndex = 0;
+            });
+            
+            swal({
+                title: 'Success!',
+                text: 'Your application has been submitted successfully. We will review it and get back to you soon.',
+                icon: 'success',
+                button: 'OK'
+            });
+        })
+        .catch(error => {
+            console.error('Error submitting application:', error);
+            submitButton.textContent = originalButtonText;
+            submitButton.disabled = false;
+            
+            // Show a more detailed error message
+            swal({
+                title: 'Submission Error',
+                text: 'We encountered an issue while submitting your application. Please ensure all required fields are filled and try again. If the problem persists, please contact our support team.',
+                icon: 'error',
+                button: 'OK'
+            });
+        });
+    });
     </script>
     <script>
     (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="VIVglEEpCNfDuTveZ18Iu";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();

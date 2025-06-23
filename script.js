@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Log the data being sent
             console.log('Sending form data:', formObject);
 
-            fetch('https://script.google.com/macros/s/AKfycbx2WvKmBkRGF_G1p_3Mvk6noOuIJDlVp0BOYEvuSvFn/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbz_yTjPkvPl23Q__J3fP0nSQwxxxO-FjbgdDOgndoOwD3rTqHeb1E_hpaEvMEWXeAkqLw/exec', {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: {

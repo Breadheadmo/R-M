@@ -85,7 +85,7 @@
                 <h2>Get In Touch With Us</h2>
                 <p>To find out more about who we are and what we do, simply contact us or send through your details and we'll get back to you as soon as possible.</p>
                 
-                <form class="contact-form">
+                <form class="contact-form" name="submit-to-google-sheet">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Your Name" required>
                         <span class="input-icon"><i class="fas fa-user"></i></span>
@@ -167,6 +167,45 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbzQfIjYHNxSY0KNSCuUm6OCv0uuKcpyE1qInBxxUn7e6ASC4C4x9lY1p-pQs_tcmc0KrQ/exec";
+    const form = document.forms["submit-to-google-sheet"];
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const data = {};
+        formData.forEach((value, key) => data[key] = value);
+
+        // Show loading state
+        const submitButton = form.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.textContent;
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
+
+        fetch(scriptURL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+                "Content-Type": "text/plain"
+            },
+            body: JSON.stringify(data),
+        })
+        .then(response => {
+            submitButton.textContent = originalButtonText;
+            submitButton.disabled = false;
+            swal("Done", "Submitted Successfully.", "success");
+            form.reset();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            submitButton.textContent = originalButtonText;
+            submitButton.disabled = false;
+            swal("Error", "Something went wrong. Please try again!", "error");
+        });
+    });
+    </script>
     <script>
     (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="VIVglEEpCNfDuTveZ18Iu";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
     </script>
